@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Java基础(J2se)第1部分    (Java基础程序设计)day02 【数据类型、运算符号】学习目标​    1.掌握Java中数据类型的划分 ​    2.掌握8种基本数据类型的使用 ​    3.掌握数据类型的转换方式 ​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序 一、数据类型1、为什么学习数据类型？1.1 声明变量 数据类型 变量名称 &#x3D; 变量值  in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Qing-Bei&#39;s Blog">
+<meta property="og:description" content="Java基础(J2se)第1部分    (Java基础程序设计)day02 【数据类型、运算符号】学习目标​    1.掌握Java中数据类型的划分 ​    2.掌握8种基本数据类型的使用 ​    3.掌握数据类型的转换方式 ​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序 一、数据类型1、为什么学习数据类型？1.1 声明变量 数据类型 变量名称 &#x3D; 变量值  in">
+<meta property="og:image" content="e:/MyBlog/source/_posts/images_1/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png">
+<meta property="og:image" content="e:/MyBlog/source/_posts/images_1/%E8%A1%A8%E8%BE%BE%E5%BC%8F.png">
+<meta property="og:image" content="e:/MyBlog/source/_posts/images_1/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7.png">
+<meta property="og:image" content="e:/MyBlog/source/_posts/images_1/%E7%AE%97%E6%95%B0%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png">
+<meta property="og:image" content="e:/MyBlog/source/_posts/images_1/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6.png">
+<meta property="article:published_time" content="2020-01-07T03:11:52.667Z">
+<meta property="article:modified_time" content="2020-01-07T03:39:56.792Z">
+<meta property="article:author" content="轻北">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:/MyBlog/source/_posts/images_1/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/07/Java基础/"/>
+
+
+
+
+
+  <title>Java基础 | Qing-Bei's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+	<!--<div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+-->
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/db37ca14.js","daovoice")
+		daovoice('init', {
+				app_id: "db37ca14"
+				});
+			daovoice('update');
+	</script>
+
+
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Qing-Bei's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="轻北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qing-Bei's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-07T11:11:52+08:00">
+                2020-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java基础-J2se"><a href="#Java基础-J2se" class="headerlink" title="Java基础(J2se)"></a>Java基础(J2se)</h1><h2 id="第1部分-Java基础程序设计"><a href="#第1部分-Java基础程序设计" class="headerlink" title="第1部分    (Java基础程序设计)"></a>第1部分    (Java基础程序设计)</h2><h3 id="day02-【数据类型、运算符号】"><a href="#day02-【数据类型、运算符号】" class="headerlink" title="day02 【数据类型、运算符号】"></a>day02 【数据类型、运算符号】</h3><h4 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h4><p>​    1.掌握Java中数据类型的划分</p>
+<p>​    2.掌握8种基本数据类型的使用</p>
+<p>​    3.掌握数据类型的转换方式</p>
+<p>​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序</p>
+<h1 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h1><h2 id="1、为什么学习数据类型？"><a href="#1、为什么学习数据类型？" class="headerlink" title="1、为什么学习数据类型？"></a>1、为什么学习数据类型？</h2><h3 id="1-1-声明变量"><a href="#1-1-声明变量" class="headerlink" title="1.1 声明变量"></a>1.1 声明变量</h3><ol>
+<li><p>数据类型 变量名称 = 变量值</p>
+</li>
+<li><p>int i = 1;</p>
+</li>
+<li><p>float pi = 3.14f;</p>
+</li>
+</ol>
+<h2 id="2、数据类型划分"><a href="#2、数据类型划分" class="headerlink" title="2、数据类型划分"></a>2、数据类型划分</h2><p><img src="E:/MyBlog/source/_posts/images_1/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png" alt=""></p>
+<h2 id="3、基本数据类型"><a href="#3、基本数据类型" class="headerlink" title="3、基本数据类型"></a>3、基本数据类型</h2><h3 id="3-1-数值型"><a href="#3-1-数值型" class="headerlink" title="3.1 数值型"></a>3.1 数值型</h3><ol>
+<li><p>8种：byte、short、int、long、float、double、char、boolean</p>
+<ol>
+<li><p>整数类型</p>
+<ol>
+<li><p>byte、short、int、long</p>
+<ol>
+<li>byte      -128~127</li>
+<li>short         -32768~32767</li>
+<li>int             -2147483648~2147483647</li>
+<li>long           -9223372036854775808~9223372036854775807</li>
+</ol>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    声明整型变量存储不同的整型值</span>
+<span class="comment">  */</span>
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 声明整型变量存储不同的整型值</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> a = <span class="number">1</span>;
+        <span class="keyword">int</span> a = <span class="number">9999999999</span>;
+           System.out.println(<span class="string">"a="</span>+a);
+    }
+} 
+
+提示：
+    上面代码位<span class="keyword">int</span>类型变量，上面赋的值是一堆<span class="number">9</span>，远远超过了<span class="keyword">int</span>类型的范围。所以会出现错误
+&lt;!--￼<span class="number">0</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>浮点类型</p>
+<ol>
+<li><p>float、double</p>
+<ol>
+<li>float    -3.410^38~3.410^38</li>
+<li>double      -1.710^308~1.710^308</li>
+</ol>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    浮点类型float案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 浮点类型<span class="title">float</span>案例</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">float</span> a = <span class="number">3.5f</span>;
+        System.out.println(<span class="string">"a="</span>+a);
+        System.out.println(<span class="string">"a*a="</span>+(a*a));
+    }
+}
+&lt;!--￼<span class="number">1</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-2-字符型"><a href="#3-2-字符型" class="headerlink" title="3.2 字符型"></a>3.2 字符型</h3><ol>
+<li><p>char</p>
+<ol>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    字符数据声明</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 字符数据声明</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">char</span> c1 = <span class="string">'a'</span>;
+        <span class="keyword">char</span> c2 = <span class="number">97</span>;
+        System.out.println(<span class="string">"c1="</span>+c1);
+        System.out.println(<span class="string">"c2="</span>+c2);
+    }
+}
+程序的执行结果:
+c1 = a
+c2 = a
+
+给字符变量赋值可以使用数值和字符，都可以保证程序的正确执行，要注意的是，如果字符赋值必须用一对单引号(<span class="string">''</span>)括起来
+&lt;!--￼<span class="number">2</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-3-布尔类型"><a href="#3-3-布尔类型" class="headerlink" title="3.3 布尔类型"></a>3.3 布尔类型</h3><ol>
+<li><p>boolean</p>
+<ol>
+<li><p>true、false</p>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    布尔数据声明</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 布尔数据声明</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;
+        System.out.println(<span class="string">"flag="</span>+flag)
+    }
+}
+布尔值常用在程序的流程控制中。后续会学习在程序流程中所起的作用
+&lt;!--￼<span class="number">3</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="5、数据类型之间的转换"><a href="#5、数据类型之间的转换" class="headerlink" title="5、数据类型之间的转换"></a>5、数据类型之间的转换</h2><h3 id="5-1-什么是数据类型转换呢？"><a href="#5-1-什么是数据类型转换呢？" class="headerlink" title="5.1 什么是数据类型转换呢？"></a>5.1 什么是数据类型转换呢？</h3><ol>
+<li>将某一种类型的变量转换为另外一种类型的变量</li>
+</ol>
+<h3 id="5-2-为何要数据类型转换呢？"><a href="#5-2-为何要数据类型转换呢？" class="headerlink" title="5.2 为何要数据类型转换呢？"></a>5.2 为何要数据类型转换呢？</h3><ol>
+<li><p>得到的结果对应的类型不满足我们的需求</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    byte运算的注意事项</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">byte</span>运算的注意事项</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+            <span class="keyword">byte</span> a = <span class="number">1</span>;  
+            <span class="keyword">byte</span> b = <span class="number">127</span>;
+            <span class="keyword">int</span> c = a + b;    
+            System.out.println(<span class="string">"c="</span>+c);
+    }
+}
+&lt;!--￼<span class="number">4</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>强制类型转换</p>
+<ol>
+<li><p>概念：从右向左看 大范围指向小范围</p>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    强制数据类型转换案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 强制数据类型转换</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+       <span class="keyword">float</span> i = <span class="number">2.5f</span>;
+       <span class="keyword">int</span> j = (<span class="keyword">int</span>)i;
+       System.out.println(<span class="string">"j="</span>+j)
+    }
+}
+&lt;!--￼<span class="number">5</span>--&gt;
+</code></pre>
+</li>
+</ol>
+<p><img src="E:/MyBlog/source/_posts/images_1/%E8%A1%A8%E8%BE%BE%E5%BC%8F.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
+<p>   表达式是由操作数据和运算符号组成，操作数据可以是常量、也可以是变量，而运算符就是数学中的运算符号，比如说“+”。</p>
+<h3 id="1-1-Java中运算符号划分"><a href="#1-1-Java中运算符号划分" class="headerlink" title="1.1 Java中运算符号划分"></a>1.1 Java中运算符号划分</h3><ol>
+<li>具体包含：赋值运算符号、算数运算符号、算数赋值运算符号、关系运算符号、逻辑运算符号、自增自减运算符号、位运算符号、括号运算符。</li>
+</ol>
+<h3 id="1-2-赋值运算符号"><a href="#1-2-赋值运算符号" class="headerlink" title="1.2 赋值运算符号"></a>1.2 赋值运算符号</h3><ol>
+<li>作用：用于变量中赋值运算的</li>
+</ol>
+<p><img src="E:/MyBlog/source/_posts/images_1/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7.png" alt=""></p>
+<ol start="2">
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    赋值运算符号(=)案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 赋值运算符号</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> e = <span class="number">1</span>;
+         System.out.println(<span class="string">"e="</span>+e);
+    }
+}
+&lt;!--￼<span class="number">6</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-4-算数赋值运算符号"><a href="#1-4-算数赋值运算符号" class="headerlink" title="1.4 算数赋值运算符号"></a>1.4 算数赋值运算符号</h3><ol>
+<li><p>作用：先运算，再赋值</p>
+<p><img src="E:/MyBlog/source/_posts/images_1/%E7%AE%97%E6%95%B0%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt=""></p>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">  *  声明两个整型变量i和j，分别赋值10和2，针对变量i和j进行加、减、乘、除、余的运算，但是将每一次运算得到的结果再赋值给变量i，然后用新i的值再和j进行其它运算，最终打印出i的值 </span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 算数赋值运算符号1</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+         <span class="keyword">int</span> i = <span class="number">10</span>;
+         <span class="keyword">int</span> j = <span class="number">2</span>;
+
+         i = i + j;
+        i = i - j;
+        i = i * j;
+        i = i / j;
+        i = i % j;
+
+        System.out.println(<span class="string">"i="</span>+j);
+     }
+}
+
+<span class="comment">/**</span>
+<span class="comment">    利用算数赋值运算符号来解决上述问题</span>
+<span class="comment">  */</span>
+      <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 算数赋值运算符号2</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+         <span class="keyword">int</span> i = <span class="number">10</span>;
+         <span class="keyword">int</span> j = <span class="number">2</span>;
+
+         i += j;<span class="comment">//i = i + j</span>
+         i -= j;
+         i *= j;
+         i /= j;
+         i %= j;
+
+           System.out.println(<span class="string">"i="</span>+j);
+     }
+}
+
+&lt;!--￼<span class="number">7</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-6-逻辑运算符号"><a href="#1-6-逻辑运算符号" class="headerlink" title="1.6 逻辑运算符号"></a>1.6 逻辑运算符号</h3><ol>
+<li><p>为什么要学习逻辑运算符号？</p>
+<ol>
+<li><pre><code class="java">JavaScore(Java考试成绩) 、DataBaseScore(数据库成绩)
+
+JavaScore &gt;= <span class="number">95</span> 逻辑运算符号 DataBaseScore &gt;= <span class="number">95</span>   结果：获取苹果x手机
+
+&lt;!--￼<span class="number">8</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    ||的使用(双位或)</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 双位或的使用</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+       <span class="keyword">int</span> JavaScore = <span class="number">95</span>;
+       <span class="keyword">int</span> DataBaseScore = <span class="number">90</span>;
+
+       System.out.println((JavaScore &gt;= <span class="number">95</span> || DataBaseScore &gt;= <span class="number">95</span>));
+   }
+}
+&lt;!--￼<span class="number">9</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    |的使用(按位|)</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 按位或的使用</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+       <span class="keyword">int</span> JavaScore = <span class="number">95</span>;
+       <span class="keyword">int</span> DataBaseScore = <span class="number">95</span>;
+
+       System.out.println((JavaScore &gt;= <span class="number">95</span> | DataBaseScore &gt;= <span class="number">95</span>));
+    }
+}
+&lt;!--￼<span class="number">10</span>--&gt;</code></pre>
+</li>
+</ol>
+</li>
+<li><p>被除数为0案例   以此案例来说明上述逻辑运算符号之间的区别</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    被除数为0的程序编写</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 被除数为0</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> x = <span class="number">10</span> / <span class="number">0</span>;
+          System.out.println(<span class="string">"x="</span>+x);
+    }
+}
+程序的执行结果:
+造成以上问题的根本原因就是被除数为<span class="number">0</span>，同过此例来进一步理解上述的区别
+&lt;!--￼<span class="number">11</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    用&amp;&amp;去解决以此来验证”&amp;&amp;“的作用</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 验证双位与</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        System.out.println(<span class="number">10</span> != <span class="number">10</span> &amp;&amp; <span class="number">10</span> / <span class="number">0</span> == <span class="number">0</span>);
+    }
+}
+上面的程序运行后，不再出现以上的错误提示，因为第一个条件不满足，所以后面的条件就不再判断了，这就是短路与的作用。
+&lt;!--￼<span class="number">12</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    用||去解决以此来验证”||“的作用</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 验证双位或</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+         System.out.println(<span class="number">10</span> == <span class="number">10</span> || <span class="number">10</span> / <span class="number">0</span> == <span class="number">0</span>);
+     }
+}
+
+从上面的运行结果可以发现，程序不再出现错误，就是因为使用了 “短路或” 如果第一个条件为<span class="keyword">true</span>，则后面的条件将不再判断。
+&lt;!--￼<span class="number">13</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-7-自增，自减运算符号"><a href="#1-7-自增，自减运算符号" class="headerlink" title="1.7 自增，自减运算符号"></a>1.7 自增，自减运算符号</h3><ol>
+<li>作用：用于自增，自减运算</li>
+</ol>
+<p>​    <img src="E:/MyBlog/source/_posts/images_1/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt=""></p>
+<ol start="2">
+<li><p>格式</p>
+<ol>
+<li>自增运算符号<ol>
+<li>变量++</li>
+<li>++变量</li>
+</ol>
+</li>
+<li>自减运算符号<ol>
+<li>变量–</li>
+<li>–变量</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><p>自增运算符号</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    自增运算符号</span>
+<span class="comment">    变量++</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 自增运算符号加加</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> i = <span class="number">2</span>;
+        System.out.println(i++);
+        <span class="comment">//System.out.println(i);</span>
+     }
+}
+&lt;!--￼<span class="number">14</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    自增运算符号</span>
+<span class="comment">    变量++,++变量，混合运算</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 自增运算符号</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> i = <span class="number">2</span>;
+        i++;
+        ++i;
+        System.out.println(++i);
+        <span class="comment">//System.out.println(i);</span>
+     }
+}
+&lt;!--￼<span class="number">15</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    自减运算符号 </span>
+<span class="comment">    --变量</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 减减自减运算符号</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> i = <span class="number">2</span>;
+        System.out.println(--i);
+        <span class="comment">//System.out.println(i);</span>
+     }
+}
+&lt;!--￼<span class="number">16</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="4">
+<li><pre><code class="java">此运算符号在我们即将要学习的循环中很重要，到那时会有一个具体的应用。
+&lt;!--￼<span class="number">17</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+<ol start="2">
+<li><p>按位或(|)</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    位运算符：按位(|)的案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 位运算符按位或</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> a = <span class="number">128</span>;
+        <span class="keyword">int</span> b = <span class="number">129</span>;
+        System.out.println(<span class="string">"i|j的结果为:"</span>+(a|b));
+    }
+}
+
+a|b的结果为：<span class="number">129</span>
+下面来分析这个程序：
+    a的值是<span class="number">128</span>，转换为二进制<span class="number">10000000</span>
+    b的值是<span class="number">129</span>，转换为二进制<span class="number">10000001</span>
+    两个二进制数据对应起来，根据按位与运算的规律可以知道，结果为<span class="number">10000001</span>
+    <span class="number">10000000</span>
+    <span class="number">10000001</span>
+----------------------
+    <span class="number">10000001</span>
+
+    只要对应的位有一个<span class="number">1</span>，结果就是<span class="number">1</span>，如果都为<span class="number">1</span>，结果也为<span class="number">1</span>，所以说结果为<span class="number">10000001</span>
+
+    但结果为什么是<span class="number">129</span>呢？而不是<span class="number">10000001</span>呢？因为<span class="number">10000001</span>这个结果是针对a|b在计算时，在计算机内部存储的计算结果。而最终显示出来的结果是以计算得到的二进制数<span class="number">10000001</span>对应的十进制进行显示的。所以说得到的结果<span class="number">129</span>。而不是计算的到的二进制数据<span class="number">10000000</span>
+
+    这个里面涉及到了另一个进制的转换  二进制转换为十进制
+
+&lt;!--￼<span class="number">18</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="4">
+<li><p>非运算(~)</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    位运算符：非运算的案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 位运算符非运算</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> a = <span class="number">128</span>；
+        System.out.println(<span class="string">"~a的结果为:"</span>+(~a));
+    }
+}
+
+~i的结果为：-<span class="number">129</span>
+下面来分析这个程序：
+    非运算就是原始的数据加<span class="number">1</span>后取反
+&lt;!--￼<span class="number">19</span>--&gt;
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="6">
+<li><p>按右移动(&gt;&gt;)</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    位运算符：右位移运算</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 按右位移运算</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> a = <span class="number">60</span>；
+        System.out.println(<span class="string">"a &gt;&gt; 2的结果为:"</span>+(a &gt;&gt; <span class="number">2</span>));
+    }
+}
+a &gt;&gt; <span class="number">2</span>的结果为：<span class="number">15</span>
+下面来分析这个程序：
+
+    <span class="number">1</span>、按照公式计算
+        操作数字/<span class="number">2</span>的次幂(移动几位次幂就是几)
+        <span class="number">60</span>     /<span class="number">2</span>         <span class="number">2</span> 
+        <span class="number">60</span>除以<span class="number">2</span>的<span class="number">2</span>次幂(<span class="number">60</span> / <span class="number">4</span> ) 结果为<span class="number">15</span>
+
+    <span class="number">2</span>、按照进制进行计算
+        a的值是<span class="number">60</span>，转换为二进制为：<span class="number">00111100</span>
+        右移两位之后变成 <span class="number">00001111</span>
+        转换为十进制显示为：<span class="number">15</span>
+        移位的过程：看图
+&lt;!--￼<span class="number">20</span>--&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-9-括号运算符号"><a href="#1-9-括号运算符号" class="headerlink" title="1.9 括号运算符号"></a>1.9 括号运算符号</h3><ol>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    括号运算符号案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 括号运算符号</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+
+        <span class="keyword">int</span> i = <span class="number">3</span> + <span class="number">5</span> + <span class="number">4</span> * <span class="number">6</span> -<span class="number">7</span>;
+        <span class="keyword">int</span> j = ((<span class="number">3</span> + <span class="number">5</span> + <span class="number">4</span>) * (<span class="number">6</span> - <span class="number">7</span>));
+
+        System.out.println(<span class="string">"3 + 5 + 4 *6 -7="</span>+i);
+        System.out.println(<span class="string">"((3 + 5 + 4) * (6 - 7))="</span>+j);
+
+    }
+}
+程序的运算结果：
+<span class="number">3</span> + <span class="number">5</span> + <span class="number">4</span> *<span class="number">6</span> -<span class="number">7</span> = <span class="number">25</span>
+((<span class="number">3</span> + <span class="number">5</span> + <span class="number">4</span>)* (<span class="number">6</span> - <span class="number">7</span>)) = -<span class="number">12</span>
+&lt;!--￼<span class="number">21</span>--&gt;
+
+
+
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+	<div>
+		
+			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+		
+	</div>
+
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="轻北 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="轻北 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/07/my-first-blog/" rel="next" title="my first blog">
+                <i class="fa fa-chevron-left"></i> my first blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/me.jpg"
+                alt="轻北" />
+            
+              <p class="site-author-name" itemprop="name">轻北</p>
+              <p class="site-description motion-element" itemprop="description">努力、爱学习的计算机初级选手</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java基础-J2se"><span class="nav-number">1.</span> <span class="nav-text">Java基础(J2se)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1部分-Java基础程序设计"><span class="nav-number">1.1.</span> <span class="nav-text">第1部分    (Java基础程序设计)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day02-【数据类型、运算符号】"><span class="nav-number">1.1.1.</span> <span class="nav-text">day02 【数据类型、运算符号】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习目标"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">学习目标</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、数据类型"><span class="nav-number">2.</span> <span class="nav-text">一、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、为什么学习数据类型？"><span class="nav-number">2.1.</span> <span class="nav-text">1、为什么学习数据类型？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-声明变量"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 声明变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、数据类型划分"><span class="nav-number">2.2.</span> <span class="nav-text">2、数据类型划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、基本数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">3、基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-数值型"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 数值型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-字符型"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2 字符型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-布尔类型"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.3 布尔类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、数据类型之间的转换"><span class="nav-number">2.4.</span> <span class="nav-text">5、数据类型之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-什么是数据类型转换呢？"><span class="nav-number">2.4.1.</span> <span class="nav-text">5.1 什么是数据类型转换呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-为何要数据类型转换呢？"><span class="nav-number">2.4.2.</span> <span class="nav-text">5.2 为何要数据类型转换呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Java中运算符号划分"><span class="nav-number">2.4.3.</span> <span class="nav-text">1.1 Java中运算符号划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-赋值运算符号"><span class="nav-number">2.4.4.</span> <span class="nav-text">1.2 赋值运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-算数赋值运算符号"><span class="nav-number">2.4.5.</span> <span class="nav-text">1.4 算数赋值运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-逻辑运算符号"><span class="nav-number">2.4.6.</span> <span class="nav-text">1.6 逻辑运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-自增，自减运算符号"><span class="nav-number">2.4.7.</span> <span class="nav-text">1.7 自增，自减运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-括号运算符号"><span class="nav-number">2.4.8.</span> <span class="nav-text">1.9 括号运算符号</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">轻北</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  <!--undefined-->
+  
+  <!--下面这三行是加的动态背景的代码
+  
+-->
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<!--<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>-->
