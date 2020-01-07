@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Java基础(J2se)第1部分    (Java基础程序设计)day02 【数据类型、运算符号】学习目标​    1.掌握Java中数据类型的划分 ​    2.掌握8种基本数据类型的使用 ​    3.掌握数据类型的转换方式 ​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序 一、数据类型1、为什么学习数据类型？1.1 声明变量 数据类型 变量名称 &#x3D; 变量值  in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Qing-Bei&#39;s Blog">
+<meta property="og:description" content="Java基础(J2se)第1部分    (Java基础程序设计)day02 【数据类型、运算符号】学习目标​    1.掌握Java中数据类型的划分 ​    2.掌握8种基本数据类型的使用 ​    3.掌握数据类型的转换方式 ​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序 一、数据类型1、为什么学习数据类型？1.1 声明变量 数据类型 变量名称 &#x3D; 变量值  in">
+<meta property="og:image" content="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/images/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png">
+<meta property="article:published_time" content="2020-01-07T03:11:52.667Z">
+<meta property="article:modified_time" content="2019-12-25T07:50:49.382Z">
+<meta property="article:author" content="轻北">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/images/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/07/Java基础/"/>
+
+
+
+
+
+  <title>Java基础 | Qing-Bei's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+	<!--<div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+-->
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Qing-Bei's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/Java%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="轻北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qing-Bei's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-07T11:11:52+08:00">
+                2020-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java基础-J2se"><a href="#Java基础-J2se" class="headerlink" title="Java基础(J2se)"></a>Java基础(J2se)</h1><h2 id="第1部分-Java基础程序设计"><a href="#第1部分-Java基础程序设计" class="headerlink" title="第1部分    (Java基础程序设计)"></a>第1部分    (Java基础程序设计)</h2><h3 id="day02-【数据类型、运算符号】"><a href="#day02-【数据类型、运算符号】" class="headerlink" title="day02 【数据类型、运算符号】"></a>day02 【数据类型、运算符号】</h3><h4 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h4><p>​    1.掌握Java中数据类型的划分</p>
+<p>​    2.掌握8种基本数据类型的使用</p>
+<p>​    3.掌握数据类型的转换方式</p>
+<p>​    4.掌握各个运算符，表达式的作用，并可以编写简单的Java应用程序</p>
+<h1 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h1><h2 id="1、为什么学习数据类型？"><a href="#1、为什么学习数据类型？" class="headerlink" title="1、为什么学习数据类型？"></a>1、为什么学习数据类型？</h2><h3 id="1-1-声明变量"><a href="#1-1-声明变量" class="headerlink" title="1.1 声明变量"></a>1.1 声明变量</h3><ol>
+<li><p>数据类型 变量名称 = 变量值</p>
+</li>
+<li><p>int i = 1;</p>
+</li>
+<li><p>float pi = 3.14f;</p>
+</li>
+</ol>
+<h2 id="2、数据类型划分"><a href="#2、数据类型划分" class="headerlink" title="2、数据类型划分"></a>2、数据类型划分</h2><p><img src="images/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86.png" alt=""></p>
+<h2 id="3、基本数据类型"><a href="#3、基本数据类型" class="headerlink" title="3、基本数据类型"></a>3、基本数据类型</h2><h3 id="3-1-数值型"><a href="#3-1-数值型" class="headerlink" title="3.1 数值型"></a>3.1 数值型</h3><ol>
+<li><p>8种：byte、short、int、long、float、double、char、boolean</p>
+<ol>
+<li><p>整数类型</p>
+<ol>
+<li><p>byte、short、int、long</p>
+<ol>
+<li>byte      -128~127</li>
+<li>short         -32768~32767</li>
+<li>int             -2147483648~2147483647</li>
+<li>long           -9223372036854775808~9223372036854775807</li>
+</ol>
+</li>
+<li><p>代码演示</p>
+<ol>
+<li><pre><code class="java"><span class="comment">/**</span>
+<span class="comment">    声明整型变量存储不同的整型值</span>
+<span class="comment">  */</span>
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 声明整型变量存储不同的整型值</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">int</span> a = <span class="number">1</span>;
+        <span class="keyword">int</span> a = <span class="number">9999999999</span>;
+           System.out.println(<span class="string">"a="</span>+a);
+    }
+} 
+
+提示：
+    上面代码位<span class="keyword">int</span>类型变量，上面赋的值是一堆<span class="number">9</span>，远远超过了<span class="keyword">int</span>类型的范围。所以会出现错误
+&lt;!--￼<span class="number">0</span>--&gt;
+<span class="comment">/**</span>
+<span class="comment">    byte运算的注意事项</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">byte</span>运算的注意事项</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+            <span class="keyword">byte</span> a = <span class="number">1</span>;  
+        <span class="keyword">byte</span> b = <span class="number">127</span>;
+        <span class="keyword">int</span> c = a + b;    
+        System.out.println(<span class="string">"c="</span>+c);
+    }
+}
+&lt;!--￼<span class="number">1</span>--&gt;
+<span class="comment">/**</span>
+<span class="comment">    浮点类型float案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 浮点类型<span class="title">float</span>案例</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">float</span> a = <span class="number">3.5f</span>;
+        System.out.println(<span class="string">"a="</span>+a);
+        System.out.println(<span class="string">"a*a="</span>+(a*a));
+    }
+}
+&lt;!--￼<span class="number">2</span>--&gt;
+<span class="comment">/**</span>
+<span class="comment">    浮点类型double案例</span>
+<span class="comment">  */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 浮点类型<span class="title">double</span>案例</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+        <span class="keyword">double</span> a = <span class="number">3.5</span>;
+        System.out.println(<span class="string">"a="</span>+a);
+        System.out.println(<span class="string">"a*a="</span>+(a*a));
+    }
+}
+提示：默认的浮点类型数据是Double类型的，后面的d可加可不加 但是如果<span class="keyword">float</span>单精度浮点型必须加f。用于和<span class="keyword">double</span>区分 要不然浮点型值还是默认<span class="keyword">double</span>类型的。
+&lt;!--￼<span class="number">3</span>--&gt;
+<span class="comment">/**</span>
+<span class="comment"> 字符数据声明</span>
+<span class="comment">*/</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 字符数据声明</span>{
+ <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{
+     <span class="keyword">char</span> c1 = <span class="string">'a'</span>;
+     <span class="keyword">char</span> c2 = <span class="number">97</span>;
+     System.out.println(<span class="string">"c1="</span>+c1);
+     System.out.println(<span class="string">"c2="</span>+c2);
+ }
+}
+程序的执行结果:
+c1 = a
+c2 = a
+</code></pre>
+</li>
+</ol>
+<p>给字符变量赋值可以使用数值和字符，都可以保证程序的正确执行，要注意的是，如果字符赋值必须用一对单引号(‘’)括起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>通过数字声明字符数据</code></pre><p>  */<br>public class 通过数字声明字符数据{</p>
+<pre><code>public static void main(String args[]){
+    char c1 = 97;
+    System.out.println(&quot;c1=&quot;+c1);
+ }</code></pre><p>}<br>程序的执行结果:<br>c1 = a</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">         </span><br><span class="line"></span><br><span class="line">### 3.3 布尔类型</span><br><span class="line"></span><br><span class="line">1. boolean</span><br><span class="line"></span><br><span class="line">   1. true、false</span><br><span class="line"></span><br><span class="line">   2. 代码演示</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>布尔数据声明</code></pre><p>  */<br>public class 布尔数据声明{</p>
+<pre><code>public static void main(String args[]){
+    boolean flag = true;
+    System.out.println(&quot;flag=&quot;+flag)
+}</code></pre><p>}<br>布尔值常用在程序的流程控制中。后续会学习在程序流程中所起的作用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">         </span><br><span class="line"></span><br><span class="line">##### </span><br><span class="line"></span><br><span class="line">## 4、基本数据类型默认值</span><br><span class="line"></span><br><span class="line">### 4.1 概念</span><br><span class="line"></span><br><span class="line">1. 在Java中，若在变量的声明时没有给变量赋初值，则会给该变量赋默认值</span><br><span class="line"></span><br><span class="line">### 4.2 格式</span><br><span class="line"></span><br><span class="line">1.  static 数据类型 变量名称</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**<br>打印每一种数据类型的默认值<br>*/<br>public class 基本数据类型默认值{<br> static byte b;<br> static short s;<br> static int i;<br> static long l;<br> static float f;<br> static double d;<br> static char c;<br> static boolean flag;<br> public static void main(String args[]){</p>
+<pre><code>System.out.println(&quot;b=&quot;+b);
+System.out.println(&quot;s=&quot;+s);
+System.out.println(&quot;i=&quot;+i);
+System.out.println(&quot;l=&quot;+l);
+System.out.println(&quot;f=&quot;+f);
+System.out.println(&quot;d=&quot;+d);
+System.out.println(&quot;c=&quot;+c);
+System.out.println(&quot;flag=&quot;+flag);</code></pre><p> }<br>}<br>关于默认值，我们在此处先记住，后续在学习数组时会有涉及。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">## 5、数据类型之间的转换</span><br><span class="line"></span><br><span class="line">### 5.1 什么是数据类型转换呢？</span><br><span class="line"></span><br><span class="line">1. 将某一种类型的变量转换为另外一种类型的变量</span><br><span class="line"></span><br><span class="line">### 5.2 为何要数据类型转换呢？</span><br><span class="line"></span><br><span class="line">1. 得到的结果对应的类型不满足我们的需求</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**<br> byte运算的注意事项<br>*/<br>public class byte运算的注意事项{<br> public static void main(String args[]){</p>
+<pre><code>byte a = 1;  
+byte b = 127;
+int c = a + b;    
+System.out.println(&quot;c=&quot;+c);</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 5.3 数据类型转换方式</span><br><span class="line"></span><br><span class="line">1.  自动类型转换</span><br><span class="line"></span><br><span class="line">   1. 概念：从右向左看，小范围-------&gt;大范围</span><br><span class="line"></span><br><span class="line">   2. 代码演示</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>自动数据类型转换案例</code></pre><p>  */<br>public class 自动数据类型转换{</p>
+<pre><code>public static void main(String args[]){
+   int i = 1; 
+   float j = i;
+   System.out.println(&quot;j=&quot;+j)
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">         </span><br><span class="line"></span><br><span class="line">2. 强制类型转换</span><br><span class="line"></span><br><span class="line">   1. 概念：从右向左看 大范围指向小范围</span><br><span class="line"></span><br><span class="line">   2. 代码演示</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>强制数据类型转换案例</code></pre><p>  */<br>public class 强制数据类型转换{</p>
+<pre><code>public static void main(String args[]){
+   float i = 2.5f;
+   int j = (int)i;
+   System.out.println(&quot;j=&quot;+j)
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">         </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 6、总结</span><br><span class="line"></span><br><span class="line">### 6.1 回扣数据类型概念</span><br><span class="line"></span><br><span class="line">1. 就是用来声明变量的，根据存储数据的类型来确定变量的类型，然后采用对应的数据类型进行声明</span><br><span class="line">2. int i &#x3D; 4;</span><br><span class="line">3. 如何选择数据类型去声明变量</span><br><span class="line">   1. 根据需求</span><br><span class="line">     2. 圆的面积</span><br><span class="line">        1. float pi &#x3D; 3.14f;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 二、运算符号与表达式</span><br><span class="line"></span><br><span class="line">## 1、为何学习运算符与表达式呢？</span><br><span class="line"></span><br><span class="line">1. 为了完成数据的操作</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>public class 完成数据的操作{<br> public static void main(String args[]){</p>
+<pre><code>int i = 1;
+int j = 2;
+
+int k = i + j;
+
+System.out.println(&quot;k=&quot;+k);</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      ![](images&#x2F;表达式.png)</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   表达式是由操作数据和运算符号组成，操作数据可以是常量、也可以是变量，而运算符就是数学中的运算符号，比如说“+”。</span><br><span class="line"></span><br><span class="line">### 1.1 Java中运算符号划分</span><br><span class="line"></span><br><span class="line">1.  具体包含：赋值运算符号、算数运算符号、算数赋值运算符号、关系运算符号、逻辑运算符号、自增自减运算符号、位运算符号、括号运算符。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 1.2 赋值运算符号</span><br><span class="line"></span><br><span class="line">1.  作用：用于变量中赋值运算的</span><br><span class="line"></span><br><span class="line">![](images&#x2F;赋值运算符号.png)</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**<br> 赋值运算符号(=)案例<br>*/<br>public class 赋值运算符号{<br> public static void main(String args[]){</p>
+<pre><code>int e = 1;
+ System.out.println(&quot;e=&quot;+e);</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 1.3 算术运算符号</span><br><span class="line"></span><br><span class="line">1.  作用：针对变量进行+，-，*，&#x2F;,%算数运算所使用的符号</span><br><span class="line"></span><br><span class="line">![](images&#x2F;算数运算符.png)</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**<br> 算数运算符号(+、-、*、/、%)案例<br>*/<br>public class 算数运算符号{<br> public static void main(String args[]){</p>
+<pre><code>int i = 10;
+int j = 2;
+
+int a = i + j;
+int b = i - j;
+int c = i * j;
+int d = i / j;
+int e = i % j;
+
+System.out.println(&quot;a=&quot;+a);
+System.out.println(&quot;b=&quot;+b);
+System.out.println(&quot;c=&quot;+c);
+System.out.println(&quot;d=&quot;+d);
+System.out.println(&quot;e=&quot;+e);</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 1.4 算数赋值运算符号</span><br><span class="line"></span><br><span class="line">1. 作用：先运算，再赋值</span><br><span class="line"></span><br><span class="line">   ![](images&#x2F;算数赋值运算符.png)</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li><p>声明两个整型变量i和j，分别赋值10和2，针对变量i和j进行加、减、乘、除、余的运算，但是将每一次运算得到的结果再赋值给变量i，然后用新i的值再和j进行其它运算，最终打印出i的值 </p>
+</li>
+<li><p>/<br>public class 算数赋值运算符号1{<br>public static void main(String args[]){</p>
+<pre><code> int i = 10;
+ int j = 2;
+
+ i = i + j;
+i = i - j;
+i = i * j;
+i = i / j;
+i = i % j;
+
+System.out.println(&quot;i=&quot;+j);</code></pre><p> }<br>}</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>/**</p>
+<pre><code>利用算数赋值运算符号来解决上述问题</code></pre><p>  */</p>
+<pre><code>  public class 算数赋值运算符号2{
+public static void main(String args[]){
+     int i = 10;
+     int j = 2;
+
+     i += j;//i = i + j
+     i -= j;
+     i *= j;
+     i /= j;
+     i %= j;
+
+       System.out.println(&quot;i=&quot;+j);
+ }</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 1.5 关系运算符号</span><br><span class="line"></span><br><span class="line">1.  作用：用于变量之间比较大小所使用的符号</span><br><span class="line"></span><br><span class="line">![](images&#x2F;关系运算符号.png)</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>关系运算符号(&gt;、&gt;=、&lt;、&lt;=、==、!=)案例</code></pre><p>  */<br>public class 关系运算符号{</p>
+<pre><code>public static void main(String args[]){
+    int a = 10;
+    int b = 2;
+
+    System.out.println(&quot;a&gt;b=&quot;+(a &gt; b));
+    System.out.println(&quot;a&gt;=b=&quot;+(a &gt;= b));
+    System.out.println(&quot;a&lt;b=&quot;+(a &lt; b));
+    System.out.println(&quot;a&lt;=b=&quot;+(a &lt;= b));
+    System.out.println(&quot;a==b=&quot;+(a == b));
+    System.out.println(&quot;a!=b=&quot;+(a != b));
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">### 1.6 逻辑运算符号</span><br><span class="line"></span><br><span class="line">1. 为什么要学习逻辑运算符号？</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>JavaScore(Java考试成绩) 、DataBaseScore(数据库成绩)</p>
+<p>JavaScore &gt;= 95 逻辑运算符号 DataBaseScore &gt;= 95   结果：获取苹果x手机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">2. 作用：多个关系运算表达式进行条件比较时，所使用的连接符号</span><br><span class="line"></span><br><span class="line">   ![](images&#x2F;逻辑运算符.png)</span><br><span class="line"></span><br><span class="line">	​	</span><br><span class="line"></span><br><span class="line">3. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>&amp;&amp;的使用(双位与)</code></pre><p>  */<br>public class 双位与的使用{</p>
+<pre><code>public static void main(String args[]){
+   int JavaScore = 95;
+   int DataBaseScore = 95;
+
+   System.out.println((JavaScore &gt;= 95 &amp;&amp; DataBaseScore &gt;= 95));
+
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>||的使用(双位或)</code></pre><p>  */<br>public class 双位或的使用{</p>
+<pre><code>public static void main(String args[]){
+   int JavaScore = 95;
+   int DataBaseScore = 90;
+
+   System.out.println((JavaScore &gt;= 95 || DataBaseScore &gt;= 95));</code></pre><p>   }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>&amp;的使用(按位与)</code></pre><p>  */</p>
+<pre><code>public class 按位与的使用{
+public static void main(String args[]){
+   int JavaScore = 95;
+   int DataBaseScore = 95;
+
+   System.out.println((JavaScore &gt;= 95 &amp; DataBaseScore &gt;= 95));
+
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>|的使用(按位|)</code></pre><p>  */<br>public class 按位或的使用{</p>
+<pre><code>public static void main(String args[]){
+   int JavaScore = 95;
+   int DataBaseScore = 95;
+
+   System.out.println((JavaScore &gt;= 95 | DataBaseScore &gt;= 95));
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">4. 为什么会有两种&quot;与&quot;运算 和 &quot;或&quot;运算呢？</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>(1) “&amp;”、“&amp;&amp;”  &amp;&amp;<del>短路与   &amp;</del>非短路与</p>
+<p>(2) “|”、“||”  ||<del>短路或者   |</del>非短路或<br>这两者有哪些区别呢？,哪种使用偏多呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 被除数为0案例   以此案例来说明上述逻辑运算符号之间的区别</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>被除数为0的程序编写</code></pre><p>  */<br>public class 被除数为0{</p>
+<pre><code>public static void main(String args[]){
+    int x = 10 / 0;
+      System.out.println(&quot;x=&quot;+x);
+}</code></pre><p>}<br>程序的执行结果:<br>造成以上问题的根本原因就是被除数为0，同过此例来进一步理解上述的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>用&amp;去解决以此来验证”&amp;“的作用</code></pre><p>  */<br>public class 验证按位与{</p>
+<pre><code>public static void main(String args[]){
+    System.out.println(10 != 10 &amp; 10 / 0 == 0);
+}</code></pre><p>}<br>程序的执行结果:<br>造成以上问题的根本原因就是与操作要把所有的条件都进行判断，所以在计算10 / 0时就出现了错误 ,那么修改为短路与呢。见下面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>用&amp;&amp;去解决以此来验证”&amp;&amp;“的作用</code></pre><p>  */<br>public class 验证双位与{</p>
+<pre><code>public static void main(String args[]){
+    System.out.println(10 != 10 &amp;&amp; 10 / 0 == 0);
+}</code></pre><p>}<br>上面的程序运行后，不再出现以上的错误提示，因为第一个条件不满足，所以后面的条件就不再判断了，这就是短路与的作用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>用|去解决以此来验证”|“的作用</code></pre><p>  */<br>public class 验证按位或{</p>
+<pre><code>public static void main(String args[]){
+    System.out.println(10 == 10 | 10 / 0 == 0);
+}</code></pre><p>}<br>造成以上问题的根本原因就是与操作要把所有的条件都进行判断，所以在计算10 / 0时就出现了错误 ,那么修改为短路或呢。见下面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5.</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<pre><code>用||去解决以此来验证”||“的作用</code></pre><p>  */<br>public class 验证双位或{</p>
+<pre><code>public static void main(String args[]){
+     System.out.println(10 == 10 || 10 / 0 == 0);
+ }</code></pre><p>}</p>
+<p>从上面的运行结果可以发现，程序不再出现错误，就是因为使用了 “短路或” 如果第一个条件为true，则后面的条件将不再判断。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6. 逻辑运算符号之间的规律</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+<p>   规律如下:</p>
+<pre><code>(1) 对于短路与(&amp;&amp;)也就是双位与而言。同真则真，一假则假。存在短路特性(前面表达式为假，后面就不需要判断了)
+
+比如说：10 != 10 &amp;&amp; 10 / 0 == 0
+
+(2) 对于非短路与(&amp;)也就是按位与而言。同真则真，一假则假。不存在短路特性(不管前面的表达式是否成立，后面的都要执行)
+
+比如说：10 != 10 &amp; 10 / 0 == 0</code></pre></li>
+</ol>
+</li>
+</ol>
+<pre><code>        (3) 对于短路或(||)也就是双位或而言。同假则假，一真则真。存在短路特性(前面表达式为真，后面就不需要判断了)
+
+        比如说：10 == 10 || 10 / 0 == 0
+
+
+        （4）对于非短路或(|)也就是按位或而言。同假则假，一真为真。不存在短路特性(不管前面的表达式是否成立，后面的都要执行)
+
+        比如说：10 != 10 | 10 / 0 == 0
+
+
+        重点掌握短路与和短路或
+
+        也就是说对于短路与和短路或，第一个条件就是关键性条件，所以在Java设置了短路与和短路或，可以提高程序的运算效率。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 1.7 自增，自减运算符号</span><br><span class="line"></span><br><span class="line">1. 作用：用于自增，自减运算</span><br><span class="line"></span><br><span class="line">​    ![](images&#x2F;自增自减运算符.png)</span><br><span class="line"></span><br><span class="line">2. 格式</span><br><span class="line"></span><br><span class="line">   1. 自增运算符号</span><br><span class="line">      1. 变量++</span><br><span class="line">      2. ++变量</span><br><span class="line">   2. 自减运算符号</span><br><span class="line">      1. 变量--</span><br><span class="line">      2. --变量</span><br><span class="line"></span><br><span class="line">3. 代码演示</span><br><span class="line"></span><br><span class="line">   1. 自增运算符号</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure>
+/**
+    自增运算符号
+    变量++
+  */
+public class 自增运算符号加加{
+    public static void main(String args[]){
+        int i = 2;
+        System.out.println(i++);
+        //System.out.println(i);
+     }
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+/**
+    自增运算符号
+    ++变量
+  */
+public class 加加自增运算符号{
+    public static void main(String args[]){
+        int i = 2;
+        System.out.println(++i);
+        //System.out.println(i);
+     }
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.</span><br></pre></td></tr></table></figure>
+/**
+    自增运算符号
+    变量++,++变量，混合运算
+  */
+public class 自增运算符号{
+    public static void main(String args[]){
+        int i = 2;
+        i++;
+        ++i;
+        System.out.println(++i);
+        //System.out.println(i);
+     }
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">2. 自减运算符号</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+/**
+    自减运算符号 
+    变量--
+  */
+public class 自减运算符号减减{
+    public static void main(String args[]){
+        int i = 2;
+        System.out.println(i--);
+        //System.out.println(i);
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+/**
+    自减运算符号 
+    --变量
+  */
+public class 减减自减运算符号{
+    public static void main(String args[]){
+        int i = 2;
+        System.out.println(--i);
+        //System.out.println(i);
+     }
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.</span><br></pre></td></tr></table></figure>
+/**
+    自减运算符号
+    变量--,--变量，混合运算
+  */
+public class 自减运算符号{
+    public static void main(String args[]){
+        int i = 2;
+        i--;
+        --i;
+        System.out.println(--i);
+        //System.out.println(i);
+     }
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">         </span><br><span class="line"></span><br><span class="line">4.</span><br></pre></td></tr></table></figure></code></pre><p>   此运算符号在我们即将要学习的循环中很重要，到那时会有一个具体的应用。<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">### 1.8 位运算符</span><br><span class="line"></span><br><span class="line">1. 作用：位运算符号指的就是二进制数据运算时所使用的符号</span><br><span class="line"></span><br><span class="line"> ![](images&#x2F;位操作符&#x2F;位操作符.png)</span><br><span class="line"></span><br><span class="line">2. 代码演示</span><br><span class="line"></span><br><span class="line">   1. 按位与(&amp;)</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure><br>         /**<br>             位运算符：按位与(&amp;)的案例<br>           */<br>         public class 位运算符按位与{<br>             public static void main(String args[]){<br>                 int a = 128;<br>                 int b = 129;</p>
+<pre><code>              System.out.println(&quot;a&amp;b的结果为:&quot;+(a&amp;b));
+       }
+   }
+   a&amp;b的结果为：128
+   下面来分析这个程序：
+       a的值是128，转换为二进制10000000
+       b的值是129，转换为二进制10000001
+       两个二进制数据对应起来，根据按位与运算的规律可以知道，结果为1000000
+       10000000
+       10000001
+       ----------------
+       10000000
+
+       只有对应的位都为1，结果才是1，结果为10000000
+
+       但结果为什么是128呢？而不是10000000呢？因为10000000这个结果是针对a&amp;b在计算机内部存储的计算结果。而最终显示出来的结果是以计算得到的二进制数10000000对应的十进制进行显示的。所以说得到的结果128。
+
+       这个里面涉及到了一个进制的转换  二进制转换为十进制
+
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">2. 按位或(|)</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+   /**
+       位运算符：按位(|)的案例
+     */
+   public class 位运算符按位或{
+       public static void main(String args[]){
+           int a = 128;
+           int b = 129;
+           System.out.println(&quot;i|j的结果为:&quot;+(a|b));
+       }
+   }
+
+   a|b的结果为：129
+   下面来分析这个程序：
+       a的值是128，转换为二进制10000000
+       b的值是129，转换为二进制10000001
+       两个二进制数据对应起来，根据按位与运算的规律可以知道，结果为10000001
+       10000000
+       10000001
+   ----------------------
+       10000001
+
+       只要对应的位有一个1，结果就是1，如果都为1，结果也为1，所以说结果为10000001
+
+       但结果为什么是129呢？而不是10000001呢？因为10000001这个结果是针对a|b在计算时，在计算机内部存储的计算结果。而最终显示出来的结果是以计算得到的二进制数10000001对应的十进制进行显示的。所以说得到的结果129。而不是计算的到的二进制数据10000000
+
+       这个里面涉及到了另一个进制的转换  二进制转换为十进制
+
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">3. 异或(^)</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+   /**
+       位运算符：异或运算的案例
+     */
+   public class 位运算符异或运算{
+       public static void main(String args[]){
+           int a = 15；
+           int b = 2;
+           System.out.println(&quot;a^b的结果为:&quot;+(a^b));
+       }
+   }
+
+   a^b的结果为:13
+   下面来分析这个程序：
+       a的值是15，转换为二进制1111
+       b的值是2， 转换为二进制0010
+       两个二进制数据对应起来，根据异或的运算规律，可以知道结果为1101
+       1111
+       0010
+       ----------------
+       1101
+
+       相同则结果为0，不同则结果为1
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">4. 非运算(~)</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+   /**
+       位运算符：非运算的案例
+     */
+   public class 位运算符非运算{
+       public static void main(String args[]){
+           int a = 128；
+           System.out.println(&quot;~a的结果为:&quot;+(~a));
+       }
+   }
+
+   ~i的结果为：-129
+   下面来分析这个程序：
+       非运算就是原始的数据加1后取反
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">5. 按左移(&lt;&lt;)</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+   /**
+       位运算符：非运算的案例
+     */
+   public class 按左位移运算{
+       public static void main(String args[]){
+           int a = 60；
+           System.out.println(&quot;a &lt;&lt; 2的结果为:&quot;+(a &lt;&lt; 2));
+       }
+   }
+   a &lt;&lt; 2的结果为:240
+   下面来分析这个程序：
+
+       1、按照公式计算
+           操作数字*2的次幂(移动几位次幂就是几)
+           60     *2         2 
+           60乘以2的2次幂(60 * 4 = 240) 结果为240
+
+       2、按照进制进行计算
+           a的值是60，转换为二进制为：00111100
+           左移两位之后变成 11110000
+           转换为十进制显示为240
+           移位的过程：看图
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">6. 按右移动(&gt;&gt;)</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+   /**
+       位运算符：右位移运算
+     */
+   public class 按右位移运算{
+       public static void main(String args[]){
+           int a = 60；
+           System.out.println(&quot;a &gt;&gt; 2的结果为:&quot;+(a &gt;&gt; 2));
+       }
+   }
+   a &gt;&gt; 2的结果为：15
+   下面来分析这个程序：
+
+       1、按照公式计算
+           操作数字/2的次幂(移动几位次幂就是几)
+           60     /2         2 
+           60除以2的2次幂(60 / 4 ) 结果为15
+
+       2、按照进制进行计算
+           a的值是60，转换为二进制为：00111100
+           右移两位之后变成 00001111
+           转换为十进制显示为：15
+           移位的过程：看图
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">7. 总结</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+         1.学习位运算符号就是为了开发高效率程序，因为位运算符号要比一般的运算符号速度要快。或者用位运算符实现一些一般算数运算符号无法实现的功能，
+
+              2.至于位运算符号速度为什么快？和它能够解决什么样的特殊运算？我们现在不用不管，后续我们会有介绍，大家现在只需要知道一点，每一种位运算符号的运算规律。
+     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 1.9 括号运算符号</span><br><span class="line"></span><br><span class="line">​	![](images&#x2F;括号运算符.png)</span><br><span class="line"></span><br><span class="line">1. 代码演示</span><br><span class="line"></span><br><span class="line">   1.</span><br></pre></td></tr></table></figure>
+/**
+    括号运算符号案例
+  */
+public class 括号运算符号{
+    public static void main(String args[]){
+
+        int i = 3 + 5 + 4 * 6 -7;
+        int j = ((3 + 5 + 4) * (6 - 7));
+
+        System.out.println(&quot;3 + 5 + 4 *6 -7=&quot;+i);
+        System.out.println(&quot;((3 + 5 + 4) * (6 - 7))=&quot;+j);
+
+    }
+}
+程序的运算结果：
+3 + 5 + 4 *6 -7 = 25
+((3 + 5 + 4)* (6 - 7)) = -12
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">2. 运算符号优先级别表</span><br><span class="line"></span><br><span class="line">   ![](images&#x2F;运算符的优先级别.png)</span><br><span class="line"></span><br><span class="line">   1. 代码演示</span><br><span class="line"></span><br><span class="line">      1.</span><br></pre></td></tr></table></figure>
+   /**
+        运算符号的优先级别应用
+     */
+   public class 运算符号的优先级别 {
+       public static void main(String[] args) {
+           int i = 1;
+
+           int j = i+++i+i+i++;
+
+           System.out.println(&quot;j=&quot;+j);
+           System.out.println(&quot;i=&quot;+i);
+       }
+   }
+   ```</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/07/my-first-blog/" rel="next" title="my first blog">
+                <i class="fa fa-chevron-left"></i> my first blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">轻北</p>
+              <p class="site-description motion-element" itemprop="description">努力、爱学习的计算机初级选手</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java基础-J2se"><span class="nav-number">1.</span> <span class="nav-text">Java基础(J2se)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1部分-Java基础程序设计"><span class="nav-number">1.1.</span> <span class="nav-text">第1部分    (Java基础程序设计)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#day02-【数据类型、运算符号】"><span class="nav-number">1.1.1.</span> <span class="nav-text">day02 【数据类型、运算符号】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习目标"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">学习目标</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、数据类型"><span class="nav-number">2.</span> <span class="nav-text">一、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、为什么学习数据类型？"><span class="nav-number">2.1.</span> <span class="nav-text">1、为什么学习数据类型？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-声明变量"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 声明变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、数据类型划分"><span class="nav-number">2.2.</span> <span class="nav-text">2、数据类型划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、基本数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">3、基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-数值型"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 数值型</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">轻北</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+</body>
+</html>
+<!--<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>-->
