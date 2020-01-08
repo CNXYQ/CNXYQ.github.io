@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个测试标签的文档</title>
+    <url>/2020/01/08/%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE%E7%9A%84%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是一个用于测试标签的文档并没有什么用</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>HTML</tag>
+        <tag>JavaScript</tag>
+        <tag>Jquery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java-Connect-MySQL</title>
     <url>/2020/01/07/Java-Connect-MySQL/</url>
     <content><![CDATA[<h1 id="Java连接MySQL"><a href="#Java连接MySQL" class="headerlink" title="Java连接MySQL"></a>Java连接MySQL</h1><h2 id="1-下载驱动包"><a href="#1-下载驱动包" class="headerlink" title="1.下载驱动包"></a>1.下载驱动包</h2><p>​    根据自己的MySQL版本下载对应的驱动包，连接:<a href="http://pan.baidu.com/s/14WyzeMuvobNbezlBpR6-dQ" target="_blank" rel="noopener">百度网盘</a></p>
