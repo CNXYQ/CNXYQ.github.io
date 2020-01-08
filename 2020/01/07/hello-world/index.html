@@ -567,6 +567,10 @@
           
 
   
+	<div id="gitalk-container">
+	</div>
+  
+  
 
 
 
@@ -917,6 +921,22 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '0e2159d114f455b51b57',
+          clientSecret: '85f1b5e8b551bea2775af2e33ffc1d9747ed30da',
+          repo: 'www.qing-bei.com',
+          owner: 'CNXYQ',
+          admin: ['CNXYQ'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
