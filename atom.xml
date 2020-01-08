@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Qing-Bei&#39;s Blog</title>
+  
+  <subtitle>Hello, I am</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-01-08T07:01:58.921Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>轻北</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java-Connect-MySQL</title>
+    <link href="http://yoursite.com/2020/01/07/Java-Connect-MySQL/"/>
+    <id>http://yoursite.com/2020/01/07/Java-Connect-MySQL/</id>
+    <published>2020-01-07T15:13:06.000Z</published>
+    <updated>2020-01-08T07:01:58.921Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java连接MySQL&quot;&gt;&lt;a href=&quot;#Java连接MySQL&quot; class=&quot;headerlink&quot; title=&quot;Java连接MySQL&quot;&gt;&lt;/a&gt;Java连接MySQL&lt;/h1&gt;&lt;h2 id=&quot;1-下载驱动包&quot;&gt;&lt;a href=&quot;#1-下载驱动包&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, I am</title>
+    <link href="http://yoursite.com/2020/01/07/hello-world/"/>
+    <id>http://yoursite.com/2020/01/07/hello-world/</id>
+    <published>2020-01-07T01:06:28.582Z</published>
+    <updated>2020-01-07T14:24:35.244Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to Qing-Bei’s blog! &lt;/p&gt;
+&lt;p&gt;I am Qing-Bei, a contemporary college student and future programmer who loves programming and mining
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
