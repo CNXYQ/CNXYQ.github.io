@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-08T13:49:27.695Z</updated>
+  <updated>2020-01-09T01:44:09.155Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/01/07/Java-Connect-MySQL/"/>
     <id>http://yoursite.com/2020/01/07/Java-Connect-MySQL/</id>
     <published>2020-01-07T15:13:06.000Z</published>
-    <updated>2020-01-08T13:49:27.695Z</updated>
+    <updated>2020-01-09T01:44:09.155Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
     </summary>
     
     
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
@@ -48,7 +50,7 @@
     <link href="http://yoursite.com/2020/01/07/hello-world/"/>
     <id>http://yoursite.com/2020/01/07/hello-world/</id>
     <published>2020-01-07T01:06:28.582Z</published>
-    <updated>2020-01-07T14:24:35.244Z</updated>
+    <updated>2020-01-09T01:44:47.469Z</updated>
     
     <summary type="html">
     
@@ -64,6 +66,10 @@
     </summary>
     
     
+      <category term="Hello" scheme="http://yoursite.com/categories/Hello/"/>
+    
+    
+      <category term="Hello World！" scheme="http://yoursite.com/tags/Hello-World%EF%BC%81/"/>
     
   </entry>
   
