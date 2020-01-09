@@ -5,9 +5,9 @@
   <subtitle>Hello, I am</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.qing-bei.com/"/>
   <updated>2020-01-09T01:44:09.155Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.qing-bei.com/</id>
   
   <author>
     <name>轻北</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Java-Connect-MySQL</title>
-    <link href="http://yoursite.com/2020/01/07/Java-Connect-MySQL/"/>
-    <id>http://yoursite.com/2020/01/07/Java-Connect-MySQL/</id>
+    <link href="http://www.qing-bei.com/2020/01/07/Java-Connect-MySQL/"/>
+    <id>http://www.qing-bei.com/2020/01/07/Java-Connect-MySQL/</id>
     <published>2020-01-07T15:13:06.000Z</published>
     <updated>2020-01-09T01:44:09.155Z</updated>
     
@@ -36,19 +36,19 @@
     </summary>
     
     
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+      <category term="java" scheme="http://www.qing-bei.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="java" scheme="http://www.qing-bei.com/tags/java/"/>
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.qing-bei.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>Hello, I am</title>
-    <link href="http://yoursite.com/2020/01/07/hello-world/"/>
-    <id>http://yoursite.com/2020/01/07/hello-world/</id>
+    <link href="http://www.qing-bei.com/2020/01/07/hello-world/"/>
+    <id>http://www.qing-bei.com/2020/01/07/hello-world/</id>
     <published>2020-01-07T01:06:28.582Z</published>
     <updated>2020-01-09T01:44:47.469Z</updated>
     
@@ -66,10 +66,10 @@
     </summary>
     
     
-      <category term="Hello" scheme="http://yoursite.com/categories/Hello/"/>
+      <category term="Hello" scheme="http://www.qing-bei.com/categories/Hello/"/>
     
     
-      <category term="Hello World！" scheme="http://yoursite.com/tags/Hello-World%EF%BC%81/"/>
+      <category term="Hello World！" scheme="http://www.qing-bei.com/tags/Hello-World%EF%BC%81/"/>
     
   </entry>
   
