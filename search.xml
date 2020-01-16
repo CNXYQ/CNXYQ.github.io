@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2020/01/16/test/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是一个测试框</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>测试分类</category>
+      </categories>
+      <tags>
+        <tag>测试标签</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java-Connect-MySQL</title>
     <url>/2020/01/07/Java-Connect-MySQL/</url>
     <content><![CDATA[<h1 id="Java连接MySQL"><a href="#Java连接MySQL" class="headerlink" title="Java连接MySQL"></a>Java连接MySQL</h1><h2 id="1-下载驱动包"><a href="#1-下载驱动包" class="headerlink" title="1.下载驱动包"></a>1.下载驱动包</h2><p>​    根据自己的MySQL版本下载对应的驱动包，连接:<a href="http://pan.baidu.com/s/14WyzeMuvobNbezlBpR6-dQ" target="_blank" rel="noopener">百度网盘</a></p>
