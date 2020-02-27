@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qing-bei.com/"/>
-  <updated>2020-01-09T01:44:09.155Z</updated>
+  <updated>2020-02-27T06:51:08.905Z</updated>
   <id>http://www.qing-bei.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络基本概念</title>
+    <link href="http://www.qing-bei.com/2020/02/27/1.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>http://www.qing-bei.com/2020/02/27/1.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+    <published>2020-02-27T06:52:00.000Z</published>
+    <updated>2020-02-27T06:51:08.905Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;计算机网络基本概念&quot;&gt;&lt;a href=&quot;#计算机网络基本概念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="http://www.qing-bei.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="http://www.qing-bei.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Java-Connect-MySQL</title>
