@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qing-bei.com/"/>
-  <updated>2020-03-01T09:18:27.706Z</updated>
+  <updated>2020-03-01T09:53:01.639Z</updated>
   <id>http://www.qing-bei.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学生管理系统</title>
+    <link href="http://www.qing-bei.com/2020/03/01/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://www.qing-bei.com/2020/03/01/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
+    <published>2020-03-01T09:28:37.000Z</published>
+    <updated>2020-03-01T09:53:01.639Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Sun Mar 01 2020 17:53:14 GMT+0800 (GMT+08:00) --&gt;&lt;h1 id=&quot;学生管理系统&quot;&gt;&lt;a href=&quot;#学生管理系统&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学生管理系统" scheme="http://www.qing-bei.com/categories/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="学生管理系统" scheme="http://www.qing-bei.com/tags/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>更新日志</title>
