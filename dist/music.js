@@ -1,3 +1,3 @@
-// build time:Tue Mar 17 2020 17:26:35 GMT+0800 (GMT+08:00)
+// build time:Tue Mar 17 2020 17:28:40 GMT+0800 (GMT+08:00)
 const ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,autoplay:false,theme:"#FADFA3",loop:"all",order:"random",preload:"auto",volume:.7,mutex:true,listFolded:false,listMaxHeight:90,lrcType:3,audio:[{name:"青柠",artist:"徐秉龙 / 桃十五",url:"https://file.geek-space.cn/%E9%9D%92%E6%9F%A0.m4a",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000000J7CRU2v2GLb.jpg?max_age=2592000",lrc:"https://file.geek-space.cn/%E9%9D%92%E6%9F%A0-%E5%BE%90%E7%A7%89%E9%BE%99%E3%80%81%E6%A1%83%E5%8D%81%E4%BA%94.lrc",theme:"#ebd0c2"}]});
 //rebuild by neat 
