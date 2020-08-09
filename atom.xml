@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qing-bei.com/"/>
-  <updated>2020-07-14T14:27:57.394Z</updated>
+  <updated>2020-08-09T13:10:55.322Z</updated>
   <id>http://www.qing-bei.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go问答101</title>
+    <link href="http://www.qing-bei.com/2020/08/09/GO%E9%97%AE%E7%AD%94101/"/>
+    <id>http://www.qing-bei.com/2020/08/09/GO%E9%97%AE%E7%AD%94101/</id>
+    <published>2020-08-09T09:28:37.000Z</published>
+    <updated>2020-08-09T13:10:55.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Sun Aug 09 2020 21:11:33 GMT+0800 (GMT+08:00) --&gt;&lt;h1 id=&quot;Go问答101&quot;&gt;&lt;a href=&quot;#Go问答101&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="GO" scheme="http://www.qing-bei.com/categories/GO/"/>
+    
+    
+      <category term="GO" scheme="http://www.qing-bei.com/tags/GO/"/>
+    
+  </entry>
   
   <entry>
     <title>初识python装饰器</title>
